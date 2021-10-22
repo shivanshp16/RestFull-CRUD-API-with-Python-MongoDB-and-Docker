@@ -1,0 +1,15 @@
+version: "3"
+
+#Creating two services for mongodb and python code
+services: 
+    mongo:
+        image: "mongo"                  #pulling mongo image service from docker hub registry
+        ports:
+            - "27017:27017"             #Assigning port to container
+    
+    python:
+        build: .                        #building container in current directory
+        depends_on:                     #making a connection between the containers
+            - mongo
+        ports:
+            - "5000:5000"               #Assigning port to container
