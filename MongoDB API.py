@@ -10,7 +10,7 @@ app = Flask(__name__)
 #A function to import the required collection
 def makecollection():
     #Making a mongodb server connection
-    '''client = MongoClient("mongodb://localhost:27017/")'''   #When server is hosted locally
+    #client = MongoClient("mongodb://localhost:27017/")        #When server is hosted locally
     client = MongoClient('mongodb://mongo:27017/')             #When using docker-compose
     mydb = client["ShivanshDB"]                                #Creating a database
     coll = mydb["E-Commerce"]                                  #Creating a collection
@@ -24,7 +24,7 @@ def makecollection():
 class MongoAPI:
     def __init__(self, data):
         log.basicConfig(level=log.DEBUG, format='%(asctime)s %(levelname)s:\n%(message)s\n')
-        '''self.client = MongoClient("mongodb://localhost:27017/")'''
+        #self.client = MongoClient("mongodb://localhost:27017/")
         self.client = MongoClient('mongodb://mongo:27017/')  
 
         #Getting database and collection information from user
@@ -264,5 +264,5 @@ def mongo_insertdata():
 
 
 if __name__ == '__main__':
-    #makecollection()                                #calling makecollection function to make required collection at the start of execution
+    makecollection()                                #calling makecollection function to make required collection at the start of execution
     app.run(debug=True, port=5000, host='0.0.0.0')  #Exposing port and host
