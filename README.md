@@ -75,7 +75,7 @@ In Postman or Curl or any other alternative.
   }
   ```
   
-1.`POST Method`: Inserts data in the collection. 
+2.`POST Method`: Inserts data in the collection. 
 
   - The document keyword is required to insert data here.
   ```
@@ -96,4 +96,104 @@ In Postman or Curl or any other alternative.
   }
   }
   ```
+  
+3.`PUT Method`: Updates already present data in collection
+ 
+ - The filter keyword identifies the old data and DataToBeUpdated keyword is for new data here.
+ ```
+ {
+  "database": "ShivanshDB",
+  "collection": "E-Commerce",
+  "Filter": {
+    "brand_name": "Sony"
+  },
+  "DataToBeUpdated": {
+    "name": "X Box", 
+    "brand_name": "Microsoft", 
+    "regular_price_value": 12000, 
+    "offer_price_value": 11000
+  }
+  }
+  ```
+  
+4.`Delete Method`: Updates already present data in collection
 
+  - The filter keyword identifies the records that matches it and deletes all of them.
+  ```
+   {
+  "database": "ShivanshDB",
+  "collection": "E-Commerce",
+  "Filter": {
+    "brand_name": "Microsoft"
+  }
+  }
+  ```
+  
+5.`PATCH Method`: Reads distint records from given field.
+
+  - Bonus Task - How many unique brands are present in the collection?
+  - Here, distinct keyword takes a field as input and returns the unique records in that field.
+ 
+
+   ```
+   {
+  "database": "ShivanshDB",
+  "collection": "E-Commerce",
+  "Distinct": "brand_name"
+  }
+  }
+  ```
+ 
+6.`COPY Method`: Bonus Task - How many products have a discount on them?
+
+  - This method will work only for default collection or a collection with fields regular_price_value and offer_price_value.
+  ```
+   {
+  "database": "ShivanshDB",
+  "collection": "E-Commerce"
+  }
+  ```
+  
+  -This solution to this task could be achieved by `GET Method` too.
+  ```
+  {
+  "database": "Shivansh",
+  "collection": "E-Commerce",
+  "Filter": {
+    "$expr":{"$gt":["$regular_price_value", "$offer_price_value"]}
+  },
+  "count":""
+  }
+  ```
+  
+7.`HEAD Method`: Bonus Task - How many products have offer price greater than 300?
+
+  - This method will work only for default collection or a collection with field offer_price_value.
+  ```
+   {
+  "database": "ShivanshDB",
+  "collection": "E-Commerce"
+  }
+  ```
+  
+  -This solution to this task could be achieved by `GET Method` too.
+  ```
+  {
+  "database": "Shivansh",
+  "collection": "E-Commerce",
+  "Filter": {
+    'offer_price_value' : {'$gt' : 300 }}
+  },
+  "count":""
+  }
+  ```
+  
+8.`OPTIONS Method`: Bonus Task - How many products have discount % greater than 30%?
+
+  - This method will work only for default collection or a collection with field regular_price_value and offer_price_value.
+  ```
+   {
+  "database": "ShivanshDB",
+  "collection": "E-Commerce"
+  }
+  ```
