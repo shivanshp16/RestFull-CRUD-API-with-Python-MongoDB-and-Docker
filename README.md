@@ -156,7 +156,7 @@ In Postman or Curl or any other alternative.
   -This solution to this task could be achieved by `GET Method` too.
   ```
   {
-  "database": "Shivansh",
+  "database": "ShivanshDB",
   "collection": "E-Commerce",
   "Filter": {
     "$expr":{"$gt":["$regular_price_value", "$offer_price_value"]}
@@ -178,7 +178,7 @@ In Postman or Curl or any other alternative.
   -This solution to this task could be achieved by `GET Method` too.
   ```
   {
-  "database": "Shivansh",
+  "database": "ShivanshDB",
   "collection": "E-Commerce",
   "Filter": {
     'offer_price_value' : {'$gt' : 300 }}
