@@ -212,7 +212,7 @@ In Postman or Curl or any other alternative.
   "collection": "E-Commerce"
   }
   ```
-   ![count_discounted_products_LOCK](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/count_discounted_products_LOCK.jpg)
+   ![count_high_discount_LOCK](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/count_high_discount_LOCK.jpg)
 
   - This solution to this task could be achieved by `GET Method` too.
   ```
@@ -225,7 +225,7 @@ In Postman or Curl or any other alternative.
 "count":""
 }
   ```
- ![count_discounted_products_GET](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/count_discounted_products_GET.jpg)
+ ![count_high_discount_GET](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/count_high_discount_GET.jpg)
 
 9.`UNLINK Method`: Drops the given collection.
    
