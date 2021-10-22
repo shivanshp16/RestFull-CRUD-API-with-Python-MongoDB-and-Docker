@@ -152,7 +152,7 @@ In Postman or Curl or any other alternative.
   "Distinct": "brand_name"
   }
   ```
-    ![Distinct_PATCH](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/Distinct_PATCH.jpg)
+  ![Distinct_PATCH](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/Distinct_PATCH.jpg)
  
 6.`COPY Method`: Bonus Task - How many products have a discount on them?
 
