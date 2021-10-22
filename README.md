@@ -141,7 +141,6 @@ In Postman or Curl or any other alternative.
   "collection": "E-Commerce",
   "Distinct": "brand_name"
   }
-  }
   ```
  
 6.`COPY Method`: Bonus Task - How many products have a discount on them?
