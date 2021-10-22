@@ -55,7 +55,7 @@ In Postman or Curl or any other alternative.
   "collection": "E-Commerce"
   }
   ```
-  ![Image of Yaktocat](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Read_GET.jpg)
+  ![Read_GET](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/Read_GET.jpg)
   
   - `GET Method` with filter constraint, will only show records where brand name is jellycat.
   ```
@@ -67,6 +67,7 @@ In Postman or Curl or any other alternative.
   }
   }
   ```
+  ![Read_GET with filter](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/Read_GET%20with%20filter.jpg)
   
   - `GET Method` with filter and count constraint, will give count of records.
   ```
@@ -79,6 +80,7 @@ In Postman or Curl or any other alternative.
   "count":""
   }
   ```
+   ![Read_GET with filter and count](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/Read_GET%20with%20filter%20and%20count.jpg)
   
 2.`POST Method`: Inserts data in the collection. 
 
@@ -101,6 +103,7 @@ In Postman or Curl or any other alternative.
   }
   }
   ```
+   ![Insert_POST](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/Insert_POST.jpg)
   
 3.`PUT Method`: Updates already present data in collection
  
@@ -120,6 +123,7 @@ In Postman or Curl or any other alternative.
   }
   }
   ```
+  ![Update_PUT](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/Update_PUT.jpg)
   
 4.`Delete Method`: Updates already present data in collection
 
@@ -133,6 +137,7 @@ In Postman or Curl or any other alternative.
   }
   }
   ```
+  ![Delete_DELETE](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/Delete_DELETE.jpg)
   
 5.`PATCH Method`: Reads distint records from given field.
 
@@ -147,6 +152,7 @@ In Postman or Curl or any other alternative.
   "Distinct": "brand_name"
   }
   ```
+    ![Distinct_PATCH](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/Distinct_PATCH.jpg)
  
 6.`COPY Method`: Bonus Task - How many products have a discount on them?
 
@@ -157,6 +163,7 @@ In Postman or Curl or any other alternative.
   "collection": "E-Commerce"
   }
   ```
+ ![count_discounted_products_COPY](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/count_discounted_products_COPY.jpg)
   
   - This solution to this task could be achieved by `GET Method` too.
   ```
@@ -169,6 +176,8 @@ In Postman or Curl or any other alternative.
   "count":""
   }
   ```
+   ![count_discounted_products_GET](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/count_discounted_products_GET.jpg)
+
   
 7.`VIEW Method`: Bonus Task - How many products have offer price greater than 300?
 
@@ -179,6 +188,7 @@ In Postman or Curl or any other alternative.
   "collection": "E-Commerce"
   }
   ```
+  ![count_high_offer_price_VIEW](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/count_high_offer_price_VIEW.jpg)
   
   - This solution to this task could be achieved by `GET Method` too.
   ```
@@ -191,7 +201,8 @@ In Postman or Curl or any other alternative.
   "count":""
   }
   ```
-  
+ ![count_high_offer_price_GET](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/count_high_offer_price_GET.jpg)
+
 8.`LOCK Method`: Bonus Task - How many products have discount % greater than 30%?
 
   - This method will work only for default collection or a collection with field regular_price_value and offer_price_value.
@@ -201,6 +212,7 @@ In Postman or Curl or any other alternative.
   "collection": "E-Commerce"
   }
   ```
+   ![count_discounted_products_LOCK](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/count_discounted_products_LOCK.jpg)
 
   - This solution to this task could be achieved by `GET Method` too.
   ```
@@ -213,7 +225,8 @@ In Postman or Curl or any other alternative.
 "count":""
 }
   ```
- 
+ ![count_discounted_products_GET](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/count_discounted_products_GET.jpg)
+
 9.`UNLINK Method`: Drops the given collection.
    
    ```
@@ -222,7 +235,8 @@ In Postman or Curl or any other alternative.
   "collection": "E-Commerce"
   }
   ```
-  
+ ![Drop_UNLINK](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/Drop_UNLINK.jpg)
+
 10.`LINK Method`: Imports data in given collection.
 
    ```
@@ -231,3 +245,4 @@ In Postman or Curl or any other alternative.
   "collection": "E-Commerce"
   }
   ```
+ ![Import_LINK](https://github.com/shivanshp16/RestFull-CRUD-API-with-Python-MongoDB-and-Docker/blob/main/Screenshots/Import_LINK.jpg)
