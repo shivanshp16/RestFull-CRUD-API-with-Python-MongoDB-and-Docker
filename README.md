@@ -30,8 +30,13 @@ A project that uses Python Flask and pymongo to complete CRUD operations and is 
 | Delete  | Delete | Deletes data from given collection, deletes all records that matches Filter  |
 | PATCH  | Distinct/list_unique_brands | Reads distinct data from given collection, uses Filter keyword to take field input / Bonus Task - How many unique brands are present in the collection?  |
 | COPY  | count_discounted_products | Bonus Task - How many products have a discount on them?  |
-| HEAD  | count_high_offer_price | Bonus Task - How many products have offer price greater than 300?  |
-| OPTIONS  | count_high_discount | Bonus Task - How many products have discount % greater than 30%?  |
+| VIEW  | count_high_offer_price | Bonus Task - How many products have offer price greater than 300?  |
+| LOCK  | count_high_discount | Bonus Task - How many products have discount % greater than 30%?  |
+| UNLINK  | Dropcollection | Drops the given collection in case of data redundancy  |
+| LINK  | Import Data | Imports the default collection data in given collection  |
+
+* The required collection of data is automatically added when the python file is excecuted but it adds the data to the collection everytime the python file is executed (If docker-compose up is used 2nd time without clearing the pervious data), to overcome this problem LINK and UNLINK method are created.
+* UNLINK drops the whole redundant data and LINK makes a new collection with required data.
 ---
 ## `API Inputs and Outputs`
 In Postman or Curl or any other alternative.
@@ -153,7 +158,7 @@ In Postman or Curl or any other alternative.
   }
   ```
   
-  -This solution to this task could be achieved by `GET Method` too.
+  - This solution to this task could be achieved by `GET Method` too.
   ```
   {
   "database": "ShivanshDB",
@@ -165,7 +170,7 @@ In Postman or Curl or any other alternative.
   }
   ```
   
-7.`HEAD Method`: Bonus Task - How many products have offer price greater than 300?
+7.`VIEW Method`: Bonus Task - How many products have offer price greater than 300?
 
   - This method will work only for default collection or a collection with field offer_price_value.
   ```
@@ -175,7 +180,7 @@ In Postman or Curl or any other alternative.
   }
   ```
   
-  -This solution to this task could be achieved by `GET Method` too.
+  - This solution to this task could be achieved by `GET Method` too.
   ```
   {
   "database": "ShivanshDB",
@@ -187,10 +192,40 @@ In Postman or Curl or any other alternative.
   }
   ```
   
-8.`OPTIONS Method`: Bonus Task - How many products have discount % greater than 30%?
+8.`LOCK Method`: Bonus Task - How many products have discount % greater than 30%?
 
   - This method will work only for default collection or a collection with field regular_price_value and offer_price_value.
   ```
+   {
+  "database": "ShivanshDB",
+  "collection": "E-Commerce"
+  }
+  ```
+
+  - This solution to this task could be achieved by `GET Method` too.
+  ```
+  {
+"database": "ShivanshDB",
+"collection": "E-Commerce",
+"Filter": {
+  "$expr":{"$gt":[{"$subtract":["$regular_price_value","$offer_price_value"]},{"$multiply":[0.3,"$regular_price_value"]}]}
+},
+"count":""
+}
+  ```
+ 
+9.`UNLINK Method`: Drops the given collection.
+   
+   ```
+   {
+  "database": "ShivanshDB",
+  "collection": "E-Commerce"
+  }
+  ```
+  
+10.`LINK Method`: Imports data in given collection.
+
+   ```
    {
   "database": "ShivanshDB",
   "collection": "E-Commerce"
